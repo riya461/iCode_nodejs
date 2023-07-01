@@ -1,13 +1,14 @@
+
 import {auth} from "../config/firebase-config"
-import {createUserWithEmailAndPassword, signOut} from 'firebase/auth'
+import {createUserWithEmailAndPassword} from 'firebase/auth'
 import {useState} from "react";
 
-export const Auth = () => {
+export const SignUp = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
     console.log(auth?.currentUser?.email);
-    const signIn = async() => {
+    const signUp = async() => {
         try {
 
         await createUserWithEmailAndPassword(auth, email, password);
@@ -16,26 +17,21 @@ export const Auth = () => {
         console.error(err);
 
     }
-    
-    };
-    const logout = async() => {
-        try{
-            await signOut(auth);
-        }
-        catch(err){
-            console.error(err);
-        }
-    }
-    return (
+}
+    return(
         <div>
-            <input placeholder="Email.."
+        <form>
+        <input placeholder="Email.."
             onChange={(e) => setEmail(e.target.value)}/>
             <input placeholder="Password"
             type="password"
             onChange={(e) => setPassword(e.target.value)}
             />
-            <button onClick={signIn}>Sign In</button>
-            <button onClick={logout}>Logout</button>
-        </div>
-    )
-};
+            <button onClick={signUp}>Sign Up</button>
+            </form>
+
+            <button >Already account Register</button>
+
+            </div>)
+    
+}
