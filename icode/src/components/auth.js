@@ -1,5 +1,5 @@
 import { auth } from "../config/firebase-config";
-import { createUserWithEmailAndPassword, signOut } from "firebase/auth";
+import {  signInWithEmailAndPassword   } from 'firebase/auth';
 import { useState } from "react";
 
 export const Auth = ({onSignUpClick}) => {
@@ -7,20 +7,25 @@ export const Auth = ({onSignUpClick}) => {
   const [password, setPassword] = useState("");
 
   console.log(auth?.currentUser?.email);
-  const signIn = async () => {
-    try {
-      await createUserWithEmailAndPassword(auth, email, password);
-    } catch (err) {
-      console.error(err);
-    }
+  const signIn = async (e) => {
+    e.preventDefault();
+        signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            // Signed in
+            const user = userCredential.user;
+            // navigate("/home")
+            // code to navigate to home screen
+            console.log(auth?.currentUser?.email);
+
+            console.log(user);
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.log(errorCode, errorMessage)
+        });
   };
-  const logout = async () => {
-    try {
-      await signOut(auth);
-    } catch (err) {
-      console.error(err);
-    }
-  };
+ 
   return (
     <div>
       <input placeholder="Email.." onChange={(e) => setEmail(e.target.value)} />
@@ -30,7 +35,6 @@ export const Auth = ({onSignUpClick}) => {
         onChange={(e) => setPassword(e.target.value)}
       />
       <button onClick={signIn}>Sign In</button>
-      {/* <button onClick={logout}>Logout</button> */}
       <button onClick={onSignUpClick}>Sign Up</button>
     </div>
   );

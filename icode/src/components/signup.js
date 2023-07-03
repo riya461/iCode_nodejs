@@ -7,12 +7,24 @@ export const SignUp = ({onLogInClick}) => {
   const [password, setPassword] = useState("");
 
   console.log(auth?.currentUser?.email);
-  const signUp = async () => {
-    try {
-      await createUserWithEmailAndPassword(auth, email, password);
-    } catch (err) {
-      console.error(err);
-    }
+  const signUp = async (e) => {
+    e.preventDefault()
+     
+      await createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            // Signed in
+            const user = userCredential.user;
+            console.log(user);
+            // navigate("/login")
+            // code to navigate to login automatically
+          })
+          .catch((error) => {
+              const errorCode = error.code;
+              const errorMessage = error.message;
+              console.log(errorCode, errorMessage);
+              
+          });
+
   };
   return (
     <div>

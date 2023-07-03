@@ -1,6 +1,5 @@
 
   import { initializeApp } from "firebase/app";
-  // import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics.js";
   import {getAuth} from 'firebase/auth';
   import {getFirestore} from 'firebase/firestore';
   const firebaseConfig = {
