@@ -1,8 +1,10 @@
 import { auth } from "../config/firebase-config";
 import {  signInWithEmailAndPassword   } from 'firebase/auth';
 import { useState } from "react";
+import { NavLink, useNavigate } from 'react-router-dom';
 
 export const Auth = ({onSignUpClick}) => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -13,10 +15,10 @@ export const Auth = ({onSignUpClick}) => {
         .then((userCredential) => {
             // Signed in
             const user = userCredential.user;
-            // navigate("/home")
+            navigate("/index")
             // code to navigate to home screen
-            console.log(auth?.currentUser?.email);
-
+            console.log(auth?.crrentUser?.email);
+            
             console.log(user);
         })
         .catch((error) => {
@@ -35,7 +37,12 @@ export const Auth = ({onSignUpClick}) => {
         onChange={(e) => setPassword(e.target.value)}
       />
       <button onClick={signIn}>Sign In</button>
-      <button onClick={onSignUpClick}>Sign Up</button>
+      <p className="text-sm text-white text-center">
+                            No account yet? {' '}
+                            <NavLink to="/signup">
+                                Sign up
+                            </NavLink>
+                        </p>
     </div>
   );
 };

@@ -1,11 +1,12 @@
 import { auth } from "../config/firebase-config";
+import { NavLink, useNavigate } from 'react-router-dom';
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
 
 export const SignUp = ({onLogInClick}) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const navigate = useNavigate();
   console.log(auth?.currentUser?.email);
   const signUp = async (e) => {
     e.preventDefault()
@@ -15,7 +16,7 @@ export const SignUp = ({onLogInClick}) => {
             // Signed in
             const user = userCredential.user;
             console.log(user);
-            // navigate("/login")
+            navigate("/login")
             // code to navigate to login automatically
           })
           .catch((error) => {
@@ -40,8 +41,12 @@ export const SignUp = ({onLogInClick}) => {
         />
         <button onClick={signUp}>Sign Up</button>
       </form>
-
-      <button onClick={onLogInClick}>Log In</button>
+      <p>
+                        Already have an account?{' '}
+                        <NavLink to="/login" >
+                            Sign in
+                        </NavLink>
+                    </p>      
     </div>
   );
 };

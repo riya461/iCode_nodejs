@@ -1,6 +1,7 @@
 import "./css/welcome.css";
 
-export const Welcome = ({ onLogInClick, onSignUpClick }) => {
+import { NavLink} from 'react-router-dom';
+export const Home = ({ onLogInClick, onSignUpClick }) => {
   return (
     <div className="main">
       <div className="top">
@@ -26,12 +27,12 @@ export const Welcome = ({ onLogInClick, onSignUpClick }) => {
           <button onClick={onSignUpClick} className="signup">
             Get Started
           </button>
-          <div className="bottom-text">
-            Already a member?{" "}
-            <a href="#" onClick={onLogInClick} className="loginMain">
-              Log In
-            </a>
-          </div>
+          <p>
+                        Already have an account?{' '}
+                        <NavLink to="/login" >
+                            Sign in
+                        </NavLink>
+                    </p>   
         </div>
         <div className="right">ㅤ</div>
       </div>
