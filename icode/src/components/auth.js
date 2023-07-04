@@ -3,7 +3,7 @@ import {  signInWithEmailAndPassword   } from 'firebase/auth';
 import { useState } from "react";
 import { NavLink, useNavigate } from 'react-router-dom';
 
-export const Auth = ({onSignUpClick}) => {
+export const Auth = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
