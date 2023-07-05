@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Gurajada&display=swap");
+
 /* Width */
 ::-webkit-scrollbar {
   width: 0.3em;
@@ -30,41 +32,58 @@
 }
 
 .top {
+  /* flex-grow: 1; */
   display: flex;
   flex-direction: row;
-  padding: 0em 0em 1em 0em ;
+  padding: 0em 0em 0em 0em;
 }
 
 .logo {
   flex-grow: 7;
-  font-size: 1.5em;
+  font-size: 2.5em;
+  font-family: Gurajada;
+  font-weight: 400;
+  height: fit-content;
+  margin: 0em 0em 0em 2em;
+
 }
 
-.top-sub{
-    flex-grow: 4;
-    display: flex;
-    flex-direction: row;
-    margin: 0em 0em 0em 0em;
+.top-sub {
+  flex-grow: 4;
+  display: flex;
+  flex-direction: row;
+  /* margin: 0em 0em 0em 0em; */
+  font-size: 1.25rem;
 }
 
 .about,
 .blog,
 .services {
-  padding: 0em 2em;
+  padding: 1.2em 2em 0em 2em;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .loginTop {
   flex-grow: 0.3;
   width: fit-content;
-  margin: 0em 0em 0em 0em;
-  padding: 0em 0em 0em 0em;
+  height: fit-content;
+  margin: 0.5em 0em 0em 0em;
+  padding: 0.5em 1em 0.5em 1em;
   border: none;
   white-space: nowrap;
-  color: aliceblue;
+  color: #E6DFF1;
   background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.25rem;
+}
+
+.loginTopLink {
+  text-decoration: none;
+  color: #E6DFF1;
 }
 
 .body {
+  /* flex-grow: 1; */
   padding: 0em 0em 0em 0em;
   display: flex;
   flex-direction: row;
@@ -80,7 +99,7 @@
 }
 
 .large-text1 {
-  padding: 1.7em 1em 0em 0em;
+  padding: 1em 1em 0em 0em;
   flex-grow: 5;
   font-size: 4em;
   font-weight: 700;
@@ -94,30 +113,41 @@
 }
 
 .sub-text1 {
-  padding: 0em 1em 0em 0em;
+  padding: 0.2em 1em 0em 0em;
 }
 
 .sub-text2 {
-  padding: 0em 1em 0em 0em;
+  padding: 0em 1em 0.2em 0em;
 }
 
 .signup {
-  margin: 2em 0em 1em 0em;
+  margin: 2.5em 0em 1.5em 0em;
   padding: 0.7em 2em 0.7em 2em;
   width: fit-content;
   border: none;
   background-color: black;
   text-align: left;
-  color: aliceblue;
+  font-size: 1.25rem;
+  color: #E6DFF1;
+}
+
+.signupLink {
+  text-decoration: none;
+  color: #E6DFF1;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .bottom-text {
-    margin: 0em 0em 0em 0em;
+  margin: 0.7em 0em 2.1em 0em;
   padding: 0em 0em 0em 0em;
 }
 
-.loginMain{
-    text-decoration: none;
+.loginMainLink {
+  text-decoration: none;
+}
+
+.loginMainLink:hover {
+  text-decoration: underline;
 }
 
 .right {

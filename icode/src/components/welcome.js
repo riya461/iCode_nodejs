@@ -1,7 +1,7 @@
 import "./css/welcome.css";
 
-import { NavLink} from 'react-router-dom';
-export const Home = ({ onLogInClick, onSignUpClick }) => {
+import { NavLink } from "react-router-dom";
+export const Home = () => {
   return (
     <div className="main">
       <div className="top">
@@ -11,8 +11,8 @@ export const Home = ({ onLogInClick, onSignUpClick }) => {
           <div className="blog">Blog</div>
           <div className="services">Services</div>
         </div>
-        <button onClick={onLogInClick} className="loginTop">
-          Log In
+        <button className="loginTop">
+          <NavLink to="/login" className="loginTopLink">Log in</NavLink>
         </button>
       </div>
 
@@ -24,15 +24,12 @@ export const Home = ({ onLogInClick, onSignUpClick }) => {
             Find your partners, build something amazing and
           </div>
           <div className="sub-text2">showcase it to your peers</div>
-          <button onClick={onSignUpClick} className="signup">
-            Get Started
+          <button className="signup">
+            <NavLink to="/signup" className="signupLink">Get Started</NavLink>
           </button>
-          <p>
-                        Already have an account?{' '}
-                        <NavLink to="/login" >
-                            Sign in
-                        </NavLink>
-                    </p>   
+          <div className="bottom-text">
+            Already have an account? <NavLink to="/login" className="loginMainLink">Sign in</NavLink>
+          </div>
         </div>
         <div className="right">ㅤ</div>
       </div>
