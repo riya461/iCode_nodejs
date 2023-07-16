@@ -8,13 +8,13 @@
 /* Track */
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 1px grey;
-  border-radius: 10px;
+  border-radius: 0px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: rgb(156, 143, 143);
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 /* Handle on hover */
@@ -28,7 +28,7 @@
   padding: 1em 1em 0em 1em;
   background-color: #e6dff1;
   /* height: 100vh; */
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .top {
@@ -45,7 +45,6 @@
   font-weight: 400;
   height: fit-content;
   margin: 0em 0em 0em 2em;
-
 }
 
 .top-sub {
@@ -61,6 +60,7 @@
 .services {
   padding: 1.2em 2em 0em 2em;
   font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
 }
 
 .loginTop {
@@ -71,7 +71,7 @@
   padding: 0.5em 1em 0.5em 1em;
   border: none;
   white-space: nowrap;
-  color: #E6DFF1;
+  color: #e6dff1;
   background-color: black;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.25rem;
@@ -79,7 +79,7 @@
 
 .loginTopLink {
   text-decoration: none;
-  color: #E6DFF1;
+  color: #e6dff1;
 }
 
 .body {
@@ -102,43 +102,45 @@
   padding: 1em 1em 0em 0em;
   flex-grow: 5;
   font-size: 4em;
-  font-weight: 700;
+  font-weight: 800;
+  color: #3a3148;
 }
 
 .large-text2 {
   padding: 0em 1em 0.4em 0em;
   flex-grow: 5;
   font-size: 4em;
-  font-weight: 700;
+  font-weight: 800;
+  color: #3a3148;
 }
 
 .sub-text1 {
-  padding: 0.2em 1em 0em 0em;
+  padding: 0.2em 1em 0em 0.2em;
 }
 
 .sub-text2 {
-  padding: 0em 1em 0.2em 0em;
+  padding: 0em 1em 0.2em 0.2em;
 }
 
 .signup {
-  margin: 2.5em 0em 1.5em 0em;
+  margin: 2em 0em 0.5em 0.2em;
   padding: 0.7em 2em 0.7em 2em;
   width: fit-content;
   border: none;
   background-color: black;
   text-align: left;
   font-size: 1.25rem;
-  color: #E6DFF1;
+  color: #e6dff1;
 }
 
 .signupLink {
   text-decoration: none;
-  color: #E6DFF1;
+  color: #e6dff1;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .bottom-text {
-  margin: 0.7em 0em 2.1em 0em;
+  margin: 0.3em 0em 3.9em 0.2em;
   padding: 0em 0em 0em 0em;
 }
 
@@ -151,6 +153,49 @@
 }
 
 .right {
-  /* border: 5px solid blue; */
-  flex-grow: 4;
+  flex-grow: 5;
+  display: flex;
+  flex-direction: column;
+}
+
+.block1{
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 -3em -4em;
+}
+
+.purple-box{
+  margin: 0 0 0 -10em;
+  width: 27em;
+  height: 22em;
+  background: #5A4C71;
+  z-index: 2;
+}
+
+.image1 {
+  width: 20em;
+  height: 20em;
+  scale: 0.75;
+  z-index: 4;
+}
+
+.block2{
+  display: flex;
+  flex-direction: row;
+  margin: -4em 0 0 5em;
+}
+
+.peach-box{
+  margin: 0 0 0 -4em;
+  width: 30em;
+  height: 23.8em;
+  background: #FED0AB;
+  z-index: 1;
+}
+
+.image2{
+  width: 20em;
+  height: 20em;
+  scale: 0.75;
+  z-index: 3;
 }
