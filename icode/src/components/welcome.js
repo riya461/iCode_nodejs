@@ -38,6 +38,9 @@ export const Home = () => {
             <NavLink to="/login" className="loginMainLink">
               Sign in
             </NavLink>
+            <NavLink to="/landing" className="loginMainLink">
+              ""Landing page""
+            </NavLink>
           </div>
         </div>
         <div className="right">

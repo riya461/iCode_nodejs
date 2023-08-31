@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Gurajada&display=swap");
 
+
+
 /* Width */
 ::-webkit-scrollbar {
   width: 0.3rem;
@@ -22,9 +24,11 @@
   background: #666464;
 }
 
+
+
 body{
    /* height: 100vh; */
-   overflow: hidden;
+   /* overflow: hidden; */
 }
 
 .main {
@@ -34,7 +38,7 @@ body{
   margin: 0 0 0 0;
   background-color: #e6dff1;
   height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .top {
@@ -72,7 +76,7 @@ body{
   flex-grow: 0.3;
   width: fit-content;
   height: fit-content;
-  margin: 0.5rem 0rem 0rem 0rem;
+  margin: 0.5rem 2rem 0rem 0rem;
   padding: 0.5rem 1rem 0.5rem 1rem;
   border: none;
   white-space: nowrap;
@@ -102,6 +106,7 @@ body{
   flex-flow: column wrap;
   flex-grow: 1;
   font-size: 120%;
+  width: 50%;
 }
 
 .large-text1 {
@@ -164,6 +169,7 @@ body{
   display: flex;
   flex-direction: column;
   height: 100%;
+  width: 50%;
 }
 
 .block1{
