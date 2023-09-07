@@ -1,3 +1,5 @@
+import React from 'react';
+
 import "./css/landing.css";
 
 export const Landing = () => {

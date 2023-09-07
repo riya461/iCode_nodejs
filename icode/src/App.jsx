@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { Home } from "./components/welcome";
 import { Auth } from "./components/auth";
 import { SignUp } from "./components/signup";
@@ -9,9 +11,7 @@ const App = () => {
   return (
     <Router>
       <div>
-        <div className="border-slate-950">
-          hello there
-        </div>
+        <div className="text-3xl font-bold underline">Hello world!</div>
         <section>
           <Routes>
             {" "}
@@ -19,12 +19,11 @@ const App = () => {
             <Route path="/signup" element={<SignUp />} />
             <Route path="/login" element={<Auth />} />
             <Route path="/landing" element={<Landing />} />
-
           </Routes>
         </section>
       </div>
     </Router>
   );
-}
+};
 
 export default App;

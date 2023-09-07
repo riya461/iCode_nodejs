@@ -1,3 +1,5 @@
+import React from 'react';
+
 import "./css/welcome.css";
 import wlcmImg1 from "./Images/wlcm_page_img1.png";
 import wlcmImg2 from "./Images/wlcm_page_img2.png";
