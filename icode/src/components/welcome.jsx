@@ -34,10 +34,11 @@ export const Home = () => {
               Get Started
             </NavLink>
           </button>
+          
           <div className="bottom-text">
-            Already a member{" "}
+            Already a member? {"   "}
             <NavLink to="/login" className="loginMainLink">
-              Log in
+              &nbsp;&nbsp;Log in
             </NavLink>
            
           </div>
