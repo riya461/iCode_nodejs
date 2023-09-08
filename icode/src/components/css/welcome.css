@@ -26,10 +26,7 @@
 
 
 
-body{
-   /* height: 100vh; */
-   /* overflow: hidden; */
-}
+
 
 .main {
   display: flex;
@@ -45,7 +42,6 @@ body{
   /* flex-grow: 1; */
   display: flex;
   flex-direction: row;
-  padding: 0rem 0rem 0rem 0rem;
 }
 
 .logo {
@@ -54,14 +50,14 @@ body{
   font-family: Gurajada;
   font-weight: 400;
   height: fit-content;
-  margin: 0rem 0rem 0rem 2rem;
+  margin: 0rem 0rem 0rem 8rem;
 }
 
 .top-sub {
   flex-grow: 4;
   display: flex;
   flex-direction: row;
-  font-size: 1.25rrem;
+  font-size: 1.25rem;
 }
 
 .about,
@@ -69,7 +65,7 @@ body{
 .services {
   padding: 1.2rem 2rem 0rem 2rem;
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 .loginTop {
@@ -83,7 +79,7 @@ body{
   color: #e6dff1;
   background-color: black;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.25rrem;
+  font-size: 1.25rem;
 }
 
 .loginTopLink {
@@ -100,6 +96,7 @@ body{
 }
 
 .left {
+  left: 0;
   padding: 1rem 4rem 0rem 8rem;
   margin: 0 0 0 0;
   display: flex;
@@ -110,38 +107,43 @@ body{
 }
 
 .large-text1 {
-  padding: 1rem 1rem 0rem 0rem;
-  font-size: 5.5rem;
-  font-weight: 800;
+  padding: 6.5rem 1rem 0rem 0rem;
+  font-size: 5.8rem;
+  font-weight: 750;
   color: #3a3148;
   white-space: nowrap;
 }
 
 .large-text2 {
   padding: 0rem 1rem 2rem 0rem;
-  font-size: 5.5rem;
-  font-weight: 800;
+  font-size: 5.8rem;
+  font-weight: 750;;
   color: #3a3148;
 }
 
 .sub-text1 {
   padding: 0.2rem 1rem 0rem 0.2rem;
   white-space: nowrap;
+  font-size: 1.5rem;
+  font-weight: lighter;
+
 }
 
 .sub-text2 {
   padding: 0rem 1rem 0.2rem 0.2rem;
   white-space: nowrap;
+  font-size: 1.5rem;
+  font-weight: lighter;
 }
 
 .signup {
   margin: 2rem 0rem 0.5rem 0.2rem;
-  padding: 0.7rem 2rem 0.7rem 2rem;
+  padding: 1rem 3rem 1rem 3rem;
   width: fit-content;
   border: none;
   background-color: black;
   text-align: left;
-  font-size: 1.25rrem;
+  font-size: 1.25rem;
   color: #e6dff1;
 }
 
@@ -154,10 +156,14 @@ body{
 .bottom-text {
   margin: 0.3rem 0rem 0rem 0.2rem;
   padding: 0rem 0rem 0rem 0rem;
+  font-size: larger;
+  font-weight: light;
 }
 
 .loginMainLink {
   text-decoration: none;
+  color: #8265b1;
+  font-weight: bold;
 }
 
 .loginMainLink:hover {
@@ -165,6 +171,7 @@ body{
 }
 
 .right {
+  right: 0;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -179,9 +186,9 @@ body{
 }
 
 .purple-box{
-  margin: 0 0 0 -10rem;
-  width: 27rem;
-  height: 22rem;
+  margin: 0 0 0 -5.3rem;
+  width: 20rem;
+  height: 27rem;
   background: #5A4C71;
   z-index: 2;
 }
@@ -192,7 +199,12 @@ body{
   scale: 0.75;
   z-index: 4;
 }
-
+.image1 img{
+  width: 40rem;
+}
+.image2 img{
+  width: 50rem;
+}
 .block2{
   display: flex;
   flex-direction: row;
